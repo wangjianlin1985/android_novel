@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="gbk"/>
+     <constant name="struts.devMode" value="true" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />   
+       
+          
+	 <package name="login" namespace="/login" extends="struts-default">
+	        <action name="login_*" class="loginAction" method="{1}">
+	        	<result name="main_view">/main.jsp</result>
+	        	<result name="error">/error.jsp</result>
+	        	<result name="input">/login.jsp</result> 
+	        	<result name="login_view">/login.jsp</result>
+	          
+	        </action>  
+	 </package>
+	 
+         <!-- NovelClassAction配置 -->
+         <package name="NovelClass" namespace="/NovelClass" extends="struts-default">
+           <action name="NovelClass_*" class="novelClassAction" method="{1}">
+             <result name="add_view">/NovelClass_add.jsp</result>
+             <result name="input">/NovelClass_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/NovelClass_query_result.jsp</result>
+             <result name="front_query_view">/NovelClass_frontquery_result.jsp</result>
+             <result name="front_show_view">/NovelClass_frontshow.jsp</result>
+             <result name="modify_view">/NovelClass_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- NovelAction配置 -->
+         <package name="Novel" namespace="/Novel" extends="struts-default">
+           <action name="Novel_*" class="novelAction" method="{1}">
+             <result name="add_view">/Novel_add.jsp</result>
+             <result name="input">/Novel_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Novel_query_result.jsp</result>
+             <result name="front_query_view">/Novel_frontquery_result.jsp</result>
+             <result name="front_show_view">/Novel_frontshow.jsp</result>
+             <result name="modify_view">/Novel_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- UserInfoAction配置 -->
+         <package name="UserInfo" namespace="/UserInfo" extends="struts-default">
+           <action name="UserInfo_*" class="userInfoAction" method="{1}">
+             <result name="add_view">/UserInfo_add.jsp</result>
+             <result name="input">/UserInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/UserInfo_query_result.jsp</result>
+             <result name="front_query_view">/UserInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/UserInfo_frontshow.jsp</result>
+             <result name="modify_view">/UserInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- CommentAction配置 -->
+         <package name="Comment" namespace="/Comment" extends="struts-default">
+           <action name="Comment_*" class="commentAction" method="{1}">
+             <result name="add_view">/Comment_add.jsp</result>
+             <result name="input">/Comment_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Comment_query_result.jsp</result>
+             <result name="front_query_view">/Comment_frontquery_result.jsp</result>
+             <result name="front_show_view">/Comment_frontshow.jsp</result>
+             <result name="modify_view">/Comment_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- CollectionAction配置 -->
+         <package name="Collection" namespace="/Collection" extends="struts-default">
+           <action name="Collection_*" class="collectionAction" method="{1}">
+             <result name="add_view">/Collection_add.jsp</result>
+             <result name="input">/Collection_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Collection_query_result.jsp</result>
+             <result name="front_query_view">/Collection_frontquery_result.jsp</result>
+             <result name="front_show_view">/Collection_frontshow.jsp</result>
+             <result name="modify_view">/Collection_modify.jsp</result>
+           </action>
+         </package>
+
+
+	 
+	 
+
+ 	 <package name="password" namespace="/password" extends="struts-default">
+	        <action name="ChangePassword" class="changePasswordAction">  
+	        	<result name="change_success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package> 
+	  
+	 <package name="User" namespace="/User" extends="struts-default">
+	        <action name="User_*" class="com.chengxusheji.action.UserAction" method="{1}">  
+	        	<result name="user_query_view">/user_query_result.jsp</result>
+	        	<result name="success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package>  
+	 
+</struts>

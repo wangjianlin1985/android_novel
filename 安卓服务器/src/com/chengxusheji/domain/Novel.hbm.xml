@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Novel" table="Novel">
+
+          <!-- 主键小说id -->
+          <id name="novelId" column="novelId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 小说类别 -->
+          <many-to-one name="novelClassObj"
+            column="novelClassObj"
+            class="NovelClass"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 小说名称 -->
+          <property
+            name="novelName"
+            column="novelName"
+            type="string"
+            length="30"
+          />
+
+          <!-- 简单图片属性: 小说图片 -->
+          <property
+            name="novelPhoto"
+            column="novelPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 作者 -->
+          <property
+            name="author"
+            column="author"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 出版社 -->
+          <property
+            name="publish"
+            column="publish"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单日期型属性: 出版日期 -->
+          <property
+            name="publishDate"
+            column="publishDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单整型属性: 页数 -->
+          <property
+            name="novelPageNum"
+            column="novelPageNum"
+            type="int"
+
+          />
+
+          <!-- 简单整型属性: 字数 -->
+          <property
+            name="wordsNum"
+            column="wordsNum"
+            type="int"
+
+          />
+
+          <!-- 简单图片属性: 小说文件 -->
+          <property
+            name="novelFile"
+            column="novelFile"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 是否推荐 -->
+          <property
+            name="tjFlag"
+            column="tjFlag"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单整型属性: 阅读量 -->
+          <property
+            name="readCount"
+            column="readCount"
+            type="int"
+
+          />
+
+          <!-- 简单字符串属性: 小说简介 -->
+          <property
+            name="novelDesc"
+            column="novelDesc"
+            type="string"
+            length="2000"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

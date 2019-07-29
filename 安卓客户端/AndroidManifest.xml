@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="NovelClassListActivity"></activity>
+        <activity android:name="NovelClassQueryActivity"></activity>
+        <activity android:name="NovelClassAddActivity"></activity>
+        <activity android:name="NovelClassEditActivity"></activity>
+        <activity android:name="NovelClassDetailActivity"></activity>
+        <activity android:name="NovelListActivity"></activity>
+        <activity android:name="NovelQueryActivity"></activity>
+        <activity android:name="NovelAddActivity"></activity>
+        <activity android:name="NovelEditActivity"></activity>
+        <activity android:name="NovelDetailActivity"></activity>
+        <activity android:name="UserInfoListActivity"></activity>
+        <activity android:name="UserInfoQueryActivity"></activity>
+        <activity android:name="UserInfoAddActivity"></activity>
+        <activity android:name="UserInfoEditActivity"></activity>
+        <activity android:name="UserInfoDetailActivity"></activity>
+        <activity android:name="CommentListActivity"></activity>
+        <activity android:name="CommentQueryActivity"></activity>
+        <activity android:name="CommentAddActivity"></activity>
+        <activity android:name="CommentEditActivity"></activity>
+        <activity android:name="CommentDetailActivity"></activity>
+        <activity android:name="CollectionListActivity"></activity>
+        <activity android:name="CollectionQueryActivity"></activity>
+        <activity android:name="CollectionAddActivity"></activity>
+        <activity android:name="CollectionEditActivity"></activity>
+        <activity android:name="CollectionDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>
